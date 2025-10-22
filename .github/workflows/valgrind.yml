@@ -11,7 +11,7 @@ jobs:
 
     steps:
       - uses: actions/checkout@v4
-      
+
       - name: Install Valgrind
         run: sudo apt-get update && sudo apt-get install valgrind
 
@@ -34,7 +34,7 @@ jobs:
           -S $GITHUB_WORKSPACE/METIS \
           -B build \
           -DGKLIB_PATH=${{ github.workspace }}/METIS/GKlib \
-          -DCMAKE_INSTALL_PREFIX=${{ runner.workspace }}/installs \
+          -DCMAKE_INSTALL_PREFIX=${{ runner.workspace }}/installs
           cmake --build build --parallel
           cmake --install build
 
