@@ -79,7 +79,7 @@ jobs:
           --show-leak-kinds=all \
           --track-origins=yes \
           -s \
-          ./bin/unit_tests test-hipo-afiro\
+          ./bin/unit_tests test-hipo-afiro \
           2>&1 | tee logfile
 
       - name: Check log for Errors
